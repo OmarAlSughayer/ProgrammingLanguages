@@ -1,0 +1,28 @@
+/* Omar Adel AlSughayer, 1337255
+ *  CSE 341, AB
+ *  Assignment 05, Questions 1-2 */
+
+/* Answer to Question 1 */
+repeat(X,[]).
+repeat(X,[X|Y]) :- repeat(X,Y).
+
+/* Answer to Question 2 */
+adjective(all).
+adjective(few).
+noun(dolphins).
+noun(clams).
+noun(octopi).
+noun(students).
+verb(frolic).
+verb(dream).
+verb(cry).
+
+sentence(X,Y,Z) :-
+	adjective(X),
+	noun(Y),
+	verb(Z).
+
+/* the consol finds 24 answers to sentence(A, B, C)'
+ *  because I have (2 adejectives)*(4 nouns)*(3 verbs) = 24 outcomes*/
+
+
